@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Tech Store</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/logo.png" alt="Campus Tech Store Logo" width="120" class="logo">
+            <h1>Campus Tech Store</h1>
+            <p>Your student-friendly place for tech essentials</p>
+            <button type="button" id="themeBtn">Toggle Dark Mode</button>
+        </header>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#student-offers">Student Offers</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="home">
+                <h2>Welcome to Campus Tech Store</h2>
+                <p>
+                    We provide useful and affordable tech products for university students.
+                    Explore laptops, headphones, smart watches, and accessories in one place.
+                </p>
+                <img src="images/hero.jpg" alt="Tablets and keyboards displayed in a technology store" width="400">
+
+                <button type="button" id="welcomeBtn">Click for Welcome Message</button>
+                <p id="welcomeMessage" aria-live="polite"></p>
+            </section>
+
+            <section id="products">
+                <h2>Our Products</h2>
+                <p>Here are some popular items available for students.</p>
+
+                <table id="productTable" class="product-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Laptop</td>
+                            <td>Good for assignments, programming, and online lectures</td>
+                            <td>Rs. 185000</td>
+                        </tr>
+                        <tr>
+                            <td>Headphones</td>
+                            <td>Useful for music, meetings, and video lessons</td>
+                            <td>Rs. 8500</td>
+                        </tr>
+                        <tr>
+                            <td>Smart Watch</td>
+                            <td>Helps track time, fitness, and notifications</td>
+                            <td>Rs. 12000</td>
+                        </tr>
+                        <tr>
+                            <td>Mouse</td>
+                            <td>Can control mouse DPI</td>
+                            <td>Rs. 2400</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Total Products:</strong> <span id="productCount">0</span></p>
+
+                <label for="priceInput">Enter Product Price:</label><br>
+                <input type="number" id="priceInput" placeholder="Enter price" min="1"><br><br>
+                <button type="button" id="discountBtn">Calculate 10% Student Discount</button>
+                <p id="discountResult" aria-live="polite"></p>
+
+                <label for="searchInput">Search Product:</label><br>
+                <input type="text" id="searchInput" placeholder="Type product name"><br><br>
+                <button type="button" id="searchBtn">Search</button>
+                <p id="searchResult" aria-live="polite"></p>
+
+                <button type="button" id="showProductsBtn">Show All Product Names</button>
+                <ul id="productListDisplay"></ul>
+            </section>
+
+            <section id="student-offers">
+                <h2>Student Offers</h2>
+                <p>We have some offers for students.</p>
+                <ol>
+                    <li>10% discount for first year students</li>
+                    <li>Free laptop bag with any laptop</li>
+                    <li>Free mouse with selected laptops</li>
+                </ol>
+
+                <button type="button" id="offersBtn">Show Special Offer Message</button>
+                <p id="offersMessage" aria-live="polite"></p>
+            </section>
+
+            <section id="about">
+                <h2>About Us</h2>
+                <p>
+                    Campus Tech Store was created to help students find simple and affordable
+                    technology products for study and daily use.
+                </p>
+                <p>This website is built as a learning project for HTML, CSS, and JavaScript.</p>
+            </section>
+
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <form class="contact-form" id="contactForm" novalidate>
+                    <label for="fullname">Full Name:</label><br>
+                    <input type="text" id="fullname" name="fullname" required><br><br>
+
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="tel" id="phone" name="phone" required><br><br>
+
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="5" cols="30" required></textarea><br><br>
+
+                    <input type="submit" value="Send Message">
+                    <p id="formMessage" aria-live="polite"></p>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <hr>
+            <p>&copy; 2026 Campus Tech Store. All rights reserved.</p>
+            <p>Designed for IT1100 HTML Lab</p>
+            <p><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">Visit W3Schools</a></p>
+            <p id="clock" aria-live="polite"></p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
